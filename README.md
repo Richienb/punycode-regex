@@ -1,41 +1,24 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Punycode Regex [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/punycode-regex/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/punycode-regex)
 
-My awesome module.
+A regex for matching punycode.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/punycode-regex.png)](https://npmjs.com/package/punycode-regex)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install punycode-regex
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const punycodeRegex = require("punycode-regex");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+punycodeRegex().test("xn--tiq49xqyj")
+//=> true
 ```
 
 ## API
 
-### theModule(input, options?)
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+### punycodeRegex()

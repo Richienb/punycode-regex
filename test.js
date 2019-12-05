@@ -1,13 +1,7 @@
 import test from "ava"
-import theModule from "."
+import punycodeRegex from "."
 
 test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
-
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+    t.true(punycodeRegex().test("xn--tiq49xqyj"))
+    t.false(punycodeRegex().test("notpunycode"))
 })

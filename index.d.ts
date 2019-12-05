@@ -1,14 +1,13 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * A regex for matching punycode.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const punycodeRegex = require("punycode-regex");
+ *
+ * punycodeRegex().test("xn--tiq49xqyj")
+ * //=> true
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function punycodeRegex(): RegExp;
 
-export = theModule;
+export = punycodeRegex;
